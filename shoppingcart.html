@@ -9,8 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/Basket.css">
-    <title>Basket</title>
+    <link rel="stylesheet" href="css/shoppingcart.css">
+    <title>Shopping Cart</title>
 </head>
 
 <body>
@@ -32,43 +32,37 @@
                     </li>
                 </ul>
 
-                <!-- <button class="navbar-person" type="button" data-toggle="modal" data-target="#exampleModal"
-                    style="border: 0; background: transparent;">
-                    <img src="assets/images/person-outline (2) 1.png">
-                </button> -->
-
-
-
+                <!-- LogIn form start -->
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary btn-1" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <img src="assets/images/person-outline (2) 1.png">
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <form>
                             <div class="form-group">
-                                <button type="button" class="btn btn-warning" style="width: 277px;
-                        height: 52px; flex-shrink: 0;" data-toggle="modal" data-target="#exampleModal">Login</button>
+                                <button type="button" class="btn btn-outline-warning btn-block" data-toggle="modal"
+                                    data-target="#exampleModal">Log in</button>
                             </div>
 
                             <p>Don't have an account yet?</p>
 
                             <div class="form-group">
 
-                                <button type="button" class="btn btn-warning" style="width: 277px;
-                        height: 52px; flex-shrink: 0;" data-toggle="modal"
+                                <button type="button" class="btn btn-outline-warning btn-block" data-toggle="modal"
                                     data-target="#exampleModal">Register</button>
                             </div>
 
                         </form>
                     </div>
                 </div>
-
+                <!-- LogIn form end-->
 
                 <span class="navbar-cart">
                     <button type="button" class="btn btn-warning"><img
                             src="assets/images/shopping-cart-outline (1) 1.png">Cart</button>
                 </span>
+
             </div>
         </nav>
     </header>
@@ -189,44 +183,33 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h1>Register</h1>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Repeat password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
             </div>
         </div>
     </div>
     <!-- Regiter modal end -->
-
-    <!-- <div class="dropdown" id="model"
-        style="width: 350px; flex-shrink: 0; background: #4A5568; margin-top: 43px; padding: 10px 10px; overflow: hidden;">
-
-        <div class="modal-body">
-
-            <form>
-                <div class="form-group">
-                    <button type="button" class="btn btn-warning" style="width: 277px;
-        height: 52px;
-        flex-shrink: 0;">Login</button>
-                </div>
-                <p>Don't have an account yet?</p>
-                <div class="form-group">
-                    <button type="button" class="btn btn-warning" style="width: 277px;
-        height: 52px;
-        flex-shrink: 0;" data-toggle="modal" data-target="#exampleModal">Register</button>
-                </div>
-            </form>
-        </div>
-    </div> -->
     <!-- Modals end -->
 
 

@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    overflow-x: hidden;
 }
 
 .header {
@@ -57,6 +56,49 @@
 
 }
 
+/* Log in form starts */
+.navbar-cart img {
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.header .dropdown .btn-1 {
+    background: transparent;
+    border: none;
+}
+
+.header .dropdown .btn:focus {
+    box-shadow: none;
+}
+
+.header .dropdown-menu {
+    padding: 15px 25px;
+    width: 350px;
+    background: #4A5568;
+    border: 1px solid #4A5568;
+    border-radius: 0;
+    margin-top: 15px;
+    margin-left: -70px;
+    color: #fff;
+}
+
+.header .dropdown-menu p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.header .form-group .btn {
+    height: 52px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header .form-group .btn:hover {
+    background: #EF9814;
+    border: 1px solid #EF9814;
+}
+
+/* Log in form ends */
+
 .navbar-cart img {
     object-fit: contain;
     margin-right: 10px;
@@ -79,12 +121,20 @@
         outline: 0 !important;
     }
 
-
+    .header .dropdown-menu {
+        margin-top: 40px !important;
+        margin-left: -51px !important;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     .navbar {
         padding: 10px 20px;
+    }
+
+    .header .dropdown-menu {
+        width: auto !important;
+        margin-left: -21px !important;
     }
 }
 
@@ -104,9 +154,12 @@ section {
 
     }
 
-    .details {
+    .detail {
+        margin-left: -30px;
+    }
 
-        margin-left: 20px;
+    .details {
+        margin-left: 60px;
     }
 
     .details h2 {
@@ -210,14 +263,14 @@ section p {
 
 @media only screen and (max-width: 576px) {
     section {
-        padding: 30px 20px;
+        padding: 30px 65px;
     }
 
 }
 
 @media only screen and (max-width: 400px) {
     section {
-        padding: 20px 15px;
+        padding: 20px 38px !important;
 
         .carousel {
             width: auto !important;
@@ -243,7 +296,7 @@ section p {
 
 
 .cont {
-    padding: 20px 130px 120px 130px;
+    padding: 20px 130px 0px 130px;
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
     background: #F7FAFC;
@@ -255,6 +308,10 @@ section p {
         margin-top: 10px;
     }
 
+    .row-3 a {
+        text-decoration: none;
+    }
+
     .card {
         width: 190px;
         height: 350px;
@@ -262,6 +319,7 @@ section p {
         border-radius: 0;
         cursor: pointer;
         margin-top: 10px;
+        margin-left: -15px;
     }
 
     .card-body {
@@ -331,9 +389,6 @@ section p {
     .card-2 {
         padding: 70px 40px !important;
     }
-
-
-
 }
 
 @media only screen and (max-width: 645px) {
@@ -359,7 +414,7 @@ section p {
 
 @media only screen and (max-width: 400px) {
     .cont {
-        padding: 15px;
+        padding: 15px 20px;
         width: 100%;
     }
 
@@ -378,10 +433,8 @@ section p {
 
 }
 
-
-
 .footer {
-    padding: 10px 140px 20px 140px;
+    padding: 30px 140px 20px 140px;
 
     .details p {
         color: #AAA;
@@ -390,8 +443,11 @@ section p {
         font-family: 'Raleway', sans-serif;
     }
 
+    .details ul li {
+        list-style: none;
+    }
 
-    .details a {
+    .details ul li a {
         text-decoration: none;
         color: #1451B8;
         font-size: 12px;
@@ -425,5 +481,77 @@ section p {
 @media only screen and (max-width: 400px) {
     .footer {
         padding: 30px 20px 20px 20px;
+    }
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.modal-content {
+    margin-top: 100px;
+    padding: 30px 60px 40px 60px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.modal-content form .form-group {
+    padding-top: 15px;
+
+}
+
+.modal-content .form-control {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal-content .form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+}
+
+
+.modal-content .form-check {
+    padding-top: 15px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.modal-content .form-check-input {
+    width: 16px;
+    height: 16px;
+    background: #C4C4C4;
+    cursor: pointer;
+}
+
+.modal-content form .btn {
+    height: 52px;
+    border-radius: 4px;
+    border: 0px solid #3D81F5;
+    background: #3D81F5;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.modal-content .close {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.modal-content .close:focus {
+    outline: 0 !important;
+}
+
+@media only screen and (max-width: 400px) {
+    .modal-content {
+        margin-top: 50px;
+        padding: 30px 30px 40px 30px;
+
     }
 }

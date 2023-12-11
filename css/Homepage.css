@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    overflow-x: hidden;
 }
 
 .header {
@@ -53,9 +52,51 @@
     border-radius: 4px;
     border: 0px solid #EF9814;
     background: #EF9814;
-    box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.25);
-
 }
+
+/* Log in form starts */
+.navbar-cart img {
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.header .dropdown .btn-1 {
+    background: transparent;
+    border: none;
+}
+
+.header .dropdown .btn:focus {
+    box-shadow: none;
+}
+
+.header .dropdown-menu {
+    padding: 15px 25px;
+    width: 350px;
+    background: #4A5568;
+    border: 1px solid #4A5568;
+    border-radius: 0;
+    margin-top: 15px;
+    margin-left: -70px;
+    color: #fff;
+}
+
+.header .dropdown-menu p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.header .form-group .btn {
+    height: 52px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header .form-group .btn:hover {
+    background: #EF9814;
+    border: 1px solid #EF9814;
+}
+
+/* Log in form ends */
+
 
 .navbar-cart img {
     object-fit: contain;
@@ -79,6 +120,10 @@
         outline: 0 !important;
     }
 
+    .header .dropdown-menu {
+        margin-top: 40px !important;
+        margin-left: -51px !important;
+    }
 
 }
 
@@ -86,10 +131,14 @@
     .navbar {
         padding: 10px 20px;
     }
+
+    .header .dropdown-menu {
+        width: auto !important;
+        margin-left: -21px !important;
+    }
 }
 
 section {
-    margin-top: -7.6px;
 
     .row {
         background: url(/assets/images/showbar.png) lightgray 50% / cover no-repeat;
@@ -181,46 +230,9 @@ section {
 
 
 .cont {
+    padding: 20px 130px 120px 130px;
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
-
-    .menu {
-        background: #F7FAFC;
-        padding: 40px 60px 800px 60px;
-    }
-
-    .menu ul {
-        width: 200px;
-    }
-
-    .menu ul li {
-        padding: 10px;
-    }
-
-    .menu ul li a {
-        color: #777;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
-        font-family: 'Raleway', sans-serif;
-    }
-
-    .menu ul li img {
-        padding-right: 20px;
-    }
-
-    .menu .ul-2 {
-        margin-left: 50px;
-        margin-top: 10px;
-    }
-
-    .menu .ul-2 li {
-        padding: 0;
-    }
-
-    .products {
-        padding: 40px 150px 120px 100px;
-    }
 
     .p {
         color: #333;
@@ -229,6 +241,9 @@ section {
         margin-top: 10px;
     }
 
+    .row-2 a {
+        text-decoration: none;
+    }
 
     .card {
         width: 190px;
@@ -237,7 +252,9 @@ section {
         border-radius: 0;
         cursor: pointer;
         margin-top: 10px;
+        margin-left: -15px;
     }
+
 
     .card p {
         color: #333;
@@ -261,17 +278,25 @@ section {
     .card-body {
         padding-left: 0;
     }
-}
 
-@media only screen and (max-width: 1200px) {}
+    .card-2 {
+        border-radius: 4px;
+        border: 0px solid #333;
+        background: #333;
+        width: 190px;
+        height: 200px;
 
-@media only screen and (max-width: 1024px) {
-
-    .menu {
-        padding: 0px 0px 700px 0px;
     }
 
+    .row-6 {
+        color: #fff;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
+@media only screen and (max-width: 1024px) {
     .card {
         width: auto !important;
         height: auto !important;
@@ -279,37 +304,36 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-
-
-    .menu {
-        padding: 40px 40px 30px 40px !important;
+    .cont {
+        padding: 20px 60px;
     }
-
-    .products {
-        padding: 10px 40px 120px 40px !important;
-    }
-
 }
 
-@media only screen and (max-width: 645px) {}
-
-@media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 645px) {
+    .cont {
+        padding: 20px 50px;
+    }
+}
 
 @media only screen and (max-width: 400px) {
+    .cont {
+        padding: 15px;
+        width: 100%;
+    }
 
     .card {
         width: auto;
     }
 
-    .products {
-        padding: 30px 40px 30px 40px !important;
+    .card-2 {
+        height: auto !important;
+        font-size: 12px;
+        width: auto !important;
     }
-
-
 }
 
 .footer {
-    padding: 10px 150px 20px 150px;
+    padding: 10px 120px 20px 120px;
 
     .details p {
         color: #AAA;
@@ -318,7 +342,11 @@ section {
         font-family: 'Raleway', sans-serif;
     }
 
-    .details a {
+    .details ul li {
+        list-style: none;
+    }
+
+    .details ul li a {
         text-decoration: none;
         color: #1451B8;
         font-size: 12px;
@@ -329,18 +357,90 @@ section {
 
 @media only screen and (max-width: 768px) {
     .footer {
-        padding: 10px 70px 20px 70px;
+        padding: 10px 50px 20px 50px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .footer {
-        padding: 10px 70px 20px 55px;
+        padding: 30px 10px 20px 10px !important;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .footer {
-        padding: 30px 20px 20px 20px;
+        padding: 30px 10px 20px 10px !important;
+    }
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.modal-content {
+    margin-top: 100px;
+    padding: 30px 60px 40px 60px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.modal-content form .form-group {
+    padding-top: 15px;
+
+}
+
+.modal-content .form-control {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal-content .form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+}
+
+
+.modal-content .form-check {
+    padding-top: 15px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.modal-content .form-check-input {
+    width: 16px;
+    height: 16px;
+    background: #C4C4C4;
+    cursor: pointer;
+}
+
+.modal-content form .btn {
+    height: 52px;
+    border-radius: 4px;
+    border: 0px solid #3D81F5;
+    background: #3D81F5;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.modal-content .close {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.modal-content .close:focus {
+    outline: 0 !important;
+}
+
+@media only screen and (max-width: 400px) {
+    .modal-content {
+        margin-top: 50px;
+        padding: 30px 30px 40px 30px;
+
     }
 }
